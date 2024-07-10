@@ -251,7 +251,7 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-    Name = "🎭Break In🎭",
+    Name = "🎭Break In2🎭",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
 })
