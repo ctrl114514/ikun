@@ -251,6 +251,19 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
+    Name = "🎭Break In🎭",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "1（会覆盖）",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/BreakIn2"))()
+    end
+})
+
+local Tab = Window:MakeTab({
     Name = "🌟脚本中心🌟",
     Icon = "rbxassetid://7734068321",
     PremiumOnly = false
