@@ -4,7 +4,7 @@ if game.PlaceId ~= 13864667823 then
 	if game.PlaceId == 14775231477 or game.PlaceId == 13864661000 then
 		
 	-- Free Gamepasses (LOBBY)
-		local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ctrl114514/shenwei/main/Orion')))()
+		local OrionLib = loadstring(game:HttpGet(('https://raw.gitmirror.com/ctrl114514/shenwei/main/Orion')))()
 		local Window = OrionLib:MakeWindow({
 			Name = "Breaking Blitz",
 			HidePremium = false,
@@ -47,7 +47,7 @@ else
 	Part.Transparency = 1
 
 	-- Locals
-	local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ctrl114514/shenwei/main/Orion')))()
+	local OrionLib = loadstring(game:HttpGet(('https://raw.gitmirror.com/ctrl114514/shenwei/main/Orion')))()
 	local Events = game:GetService("ReplicatedStorage"):WaitForChild("Events")
 	local SelectedItem = "Med Kit"
 	local Damange = 5
