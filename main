@@ -74,6 +74,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+    Name = "动作（R6较多，R15较少）",
+    Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/FE%20Animation"))()
+    end
+})
+
+Tab:AddButton({
 	Name = "踏空行走（配上无限跳效果更佳）",
 	Callback = function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ctrl114514/shenwei/main/Float'))()
@@ -274,6 +281,27 @@ Tab:AddButton({
     Callback = function()
     loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\103\101\109\120\72\119\65\49"))()
     end
+})
+
+
+local Tab = Window:MakeTab({
+    Name = "💉注入器💉",
+    Icon = "rbxassetid://7734068321",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Synapse X [ PE Delta ]",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/syn"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Codex [ PE ]",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/codex"))()
+  	end    
 })
 
 
