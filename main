@@ -1,5 +1,5 @@
 local CoreGui = game:GetService("StarterGui")CoreGui:SetCore("SendNotification", {    Title = "神委🇨🇳",    Text = "耐心等待（反挂机已开启）",    Duration = 5, })print("反挂机开启")		local vu = game:GetService("VirtualUser")		game:GetService("Players").LocalPlayer.Idled:connect(function()		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		   wait(1)		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)		end)
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ctrl114514/shenwei/main/Orion')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.gitmirror.com/ctrl114514/shenwei/main/Orion')))()
 local Window = OrionLib:MakeWindow({Name = "神委🇨🇳", HidePremium = false, SaveConfig = false, IntroText = "欢迎使用", ConfigFolder = "欢迎使用"})
 
 local Tab = Window:MakeTab({
@@ -22,21 +22,21 @@ Tab:AddButton({
   Name = "光影",
   Default = false,
   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/Graphics"))()
+    loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/Graphics"))()
   end
 })
 
 Tab:AddButton({
 	Name = "超高画质",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/Graphics2"))()
+loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/Graphics2"))()
 end
 })    
 
 Tab:AddButton({
   Name = "旋转",
   Callback = function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/ctrl114514/shenwei/main/spin', true))()
+    loadstring(game:HttpGet('https://raw.gitmirror.com/ctrl114514/shenwei/main/spin', true))()
   end
 })
 
@@ -55,35 +55,35 @@ Tab:AddToggle({
 Tab:AddButton({
 	Name = "飞车",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/flycar"))()
+loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/flycar"))()
 	end
 })
 
 Tab:AddButton({
 	Name = "爬墙",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/climb"))()
+loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/climb"))()
 end
 })
 
 Tab:AddButton({
     Name = "动画",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/animation"))()
+    loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/animation"))()
     end
 })
 
 Tab:AddButton({
     Name = "动作（R6较多，R15较少）",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/FE%20Animation"))()
+    loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/FE%20Animation"))()
     end
 })
 
 Tab:AddButton({
 	Name = "踏空行走（配上无限跳效果更佳）",
 	Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/ctrl114514/shenwei/main/Float'))()
+loadstring(game:HttpGet('https://raw.gitmirror.com/ctrl114514/shenwei/main/Float'))()
 	end
 })
 
@@ -91,16 +91,32 @@ Tab:AddButton({
 	Name = "无限跳（配上踏空行走效果更佳）",
     Default = false,
 	Callback = function(Value)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/jump", true))()
+loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/jump", true))()
 	end
 })
 
 Tab:AddButton({
 	Name = "fe指令",
 	Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/infiniteyield"))()
+loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/infiniteyield"))()
 end
 })  
+
+AntiKick = Tab:AddToggle({
+	Name = "防踢（但是重进）",
+	Default = false,
+	Callback = function(Value)
+	_G.AntiKick = Value
+while _G.AntiKick do
+for i,v in pairs(game.CoreGui.RobloxPromptGui.promptOverlay:GetDescendants()) do
+                    if v.Name == "ErrorPrompt" then
+game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, game.Players.LocalPlayer)
+                    end
+                end
+task.wait()
+end
+	end    
+})
 
 local player = Window:MakeTab({
 	Name = "👁玩家👁",
@@ -145,7 +161,7 @@ player:AddButton({
 player:AddButton({
 	Name = "🚀飞行",
 	Callback = function()
-      	loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/fly"))()
+      	loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/fly"))()
   	end
 })
 
@@ -207,14 +223,14 @@ end)
 player:AddButton({
 	Name = "传送玩家",
 	Callback = function()
-      	loadstring(game:HttpGet(("https://raw.githubusercontent.com/ctrl114514/shenwei/main/tp")))()
+      	loadstring(game:HttpGet(("https://raw.gitmirror.com/ctrl114514/shenwei/main/tp")))()
   	end
 })
 
 player:AddButton({
 	Name = "玩家进入提示",
 	Callback = function()
-      	loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/bbn"))()
+      	loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/bbn"))()
   	end
 })
 
@@ -227,7 +243,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
   Name = "1",
   Callback = function()
-     loadstring(game:HttpGet("https://raw.githubusercontent.com/Minhtriettt/Free-Script/main/MTriet-Hub.lua"))()
+     loadstring(game:HttpGet("https://raw.gitmirror.com/Minhtriettt/Free-Script/main/MTriet-Hub.lua"))()
   end
 })
 
@@ -240,7 +256,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
   Name = "红圈格挡",
   Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/bladeball"))()
+    loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/bladeball"))()
   end
 })
 
@@ -253,7 +269,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "1",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
+    loadstring(game:HttpGet("https://raw.gitmirror.com/Giangplay/Slap_Battles/main/Slap_Battles.lua"))()
     end
 })
 
@@ -266,7 +282,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
     Name = "1（会覆盖）",
     Callback = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/BreakIn2"))()
+    loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/BreakIn2"))()
     end
 })
 
@@ -293,14 +309,14 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "Synapse X [ PE Delta ]",
 	Callback = function()
-      	loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/syn"))()
+      	loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/syn"))()
   	end    
 })
 
 Tab:AddButton({
 	Name = "Codex [ PE ]",
 	Callback = function()
-      	loadstring(game:HttpGet("https://raw.githubusercontent.com/ctrl114514/shenwei/main/codex"))()
+      	loadstring(game:HttpGet("https://raw.gitmirror.com/ctrl114514/shenwei/main/codex"))()
   	end    
 })
 
